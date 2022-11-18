@@ -7,7 +7,6 @@ import { useState } from "react";
 const Form = (props) => {
 
     const racas = [
-        "",
         "Ainur",
         "Anões",
         "Criaturas",

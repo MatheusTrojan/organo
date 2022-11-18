@@ -1,0 +1,11 @@
+.cards-raca {
+    padding: 2rem;
+    text-align: center;
+}
+
+.cards-raca h3 {
+    font-size: 2rem;
+    border-bottom: 0.25rem solid;
+    display: inline-block;
+    padding-bottom: 0.5rem;
+}
