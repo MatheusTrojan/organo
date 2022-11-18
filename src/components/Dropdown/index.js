@@ -7,7 +7,7 @@ const Dropdown = (props) => {
     return (
         <div className="dropdown-list">
             <label>{props.label}</label>
-            <select>
+            <select onChange={event => props.aoAlterado(event.target.value)} value={props.value} required={props.required} >
                 {props.itens.map(item => {
                     return <option key={item}>{item}</option>
                 })}
