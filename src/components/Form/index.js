@@ -6,15 +6,6 @@ import { useState } from "react";
 
 const Form = (props) => {
 
-    const racas = [
-        "Ainur",
-        "Anões",
-        "Criaturas",
-        "Elfos",
-        "Hobbits",
-        "Humanos"
-    ]
-
     const [nome, setNome] = useState("")
     const [historia, setHistoria] = useState("")
     const [imagem, setImagem] = useState("")
@@ -59,7 +50,7 @@ const Form = (props) => {
                 />
                 <Dropdown 
                     label="Raça" 
-                    itens={racas}
+                    itens={props.racas}
                     required={true}
                     valor={raca}
                     aoAlterado={valor => setRaca(valor)}

@@ -49,7 +49,7 @@ function App() {
   return (
     <div className="App">
       <Banner />
-      <Form aoPersonagemCadastrado={personagem => personagemAdicionado(personagem)}/>
+      <Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => personagemAdicionado(personagem)}/>
 
       {racas.map(raca => <CardsRaca key={raca.nome} nome={raca.nome} corPrimaria={raca.corPrimaria} corSecundaria={raca.corSecundaria}/>)}
 
