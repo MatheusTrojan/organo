@@ -7,7 +7,7 @@
     border-radius: 10px 10px 0px 0px;
 }
 .personagem img {
-    width: 100px;
+    width: 125px;
     border-radius: 50%;
     position: relative;
     bottom: -50px;
@@ -17,8 +17,8 @@
     background: #FFFFFF;
     box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.08);
     border-radius: 0px 0px 10px 10px;
-    padding-top: 90px;
-    padding-bottom: 40px;
+    padding-top: 50px;
+    padding-bottom: 20px;
 }
 
 .personagem .rodape h4 {
