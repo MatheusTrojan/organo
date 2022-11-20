@@ -1,3 +1,7 @@
+# Organograma com temática Senhor dos Anéis!
+
+Em breve maiores informações sobre o projeto por aqui!
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
