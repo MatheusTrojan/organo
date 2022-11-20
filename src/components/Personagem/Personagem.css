@@ -34,4 +34,7 @@
     line-height: 22px;
     color: #212121;
     padding: 0 16px;
+    max-height: 100px;
+    overflow-y: scroll;
+    text-align: justify;
 }

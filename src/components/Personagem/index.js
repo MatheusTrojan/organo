@@ -9,7 +9,7 @@ const Personagem = () => {
 
             <div className="rodape">
                 <h4>Gandalf</h4>
-                <h5>Mago Istari blablabla</h5>
+                <h5>aaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa aaaaaaaaaaaa</h5>
             </div>
         </div>
     )
