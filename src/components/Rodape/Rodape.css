@@ -1,0 +1,22 @@
+.footer {
+    align-items: center;
+    background: #B7B2A8;
+    color: #000000;
+    display: flex;
+    gap: 3rem;
+    justify-content: center;
+    padding: 80px;
+}
+
+.footer ul li {
+    display: inline-block;
+    margin-right: 32px;
+}
+
+.footer ul li:last-child {
+    margin-right: 0;
+}
+
+.footer-redes img {
+    width: 30px;
+}

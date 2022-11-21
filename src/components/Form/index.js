@@ -21,6 +21,10 @@ const Form = (props) => {
             imagem: imagem,
             raca: raca
         })
+        setNome("")
+        setHistoria("")
+        setImagem("")
+        setRaca("")
     }
 
     return (
