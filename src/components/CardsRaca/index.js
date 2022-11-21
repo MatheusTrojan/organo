@@ -13,6 +13,7 @@ const CardsRaca = (props) => {
             <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
             <div className="cards-personagem">
                 {props.personagens.map( personagem => <Personagem 
+                    key={personagem.nome}
                     nome={personagem.nome} 
                     historia={personagem.historia}
                     imagem={personagem.imagem}
