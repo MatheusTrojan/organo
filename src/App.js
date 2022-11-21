@@ -43,6 +43,7 @@ function App() {
 	const [personagens, setPersonagens] = useState([])
 
 	const personagemAdicionado = (personagem) => {
+		// debugger
 		// console.log(personagem)
 		setPersonagens([...personagens, personagem])
 	}

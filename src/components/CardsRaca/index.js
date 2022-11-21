@@ -17,6 +17,7 @@ const CardsRaca = (props) => {
                     nome={personagem.nome} 
                     historia={personagem.historia}
                     imagem={personagem.imagem}
+                    corDeFundo={props.corPrimaria}
                     />)}
             </div>
         </section>
