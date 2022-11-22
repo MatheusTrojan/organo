@@ -1,74 +1,62 @@
-# Organograma com temática Senhor dos Anéis!
+# Organograma Senhor dos Anéis
 
-Em breve maiores informações sobre o projeto por aqui!
+<p>Um aplicativo criado com React para criar listas dos personagens do universo de Senhor dos Anéis</p>
 
-# Getting Started with Create React App
+## Conteúdo deste Readme:
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+- [Resumo](#resumo)
+  - [O Desafio](#o-desafio)
+  - [Screenshot](#screenshot)
+  - [Preview](#preview)
+  - [Deploy](#deploy)
+- [Meu processo](#meu-processo)
+  - [Projetado com](#projetado-com)
+  - [O que falta fazer](#o-que-falta-fazer)
+  - [O que eu aprendi](#o-que-eu-aprendi)
+- [Autores](#autores)
 
-## Available Scripts
+## Resumo
 
-In the project directory, you can run:
+### O Desafio
 
-### `npm start`
+O aplicativo tem como objetivo ser de fácil utilização. Criado como forma de praticar a utilização do React, foi realizado durante as aulas do curso de React da Alura. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+O usuário deverá conseguir:
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- Preencher o formulário de inserção de novos personagens
+- Percorrer a lista de raças dos personagens inseridos (todos filtrados, onde aparecerão apenas as listas que já possuam algum personagem)
 
-### `npm test`
+### Screenshot
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![](public/images/print.png#vitrinedev)
 
-### `npm run build`
+### Preview
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![](public/images/demonstracao.gif)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Deploy
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Acesse através deste [link](https://organograma-lotr.vercel.app/)
 
-### `npm run eject`
+## Processo de Criação
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+### Projetado com
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+- React
+- React Hooks
+- Componentes Reutilizáveis
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+### O que falta fazer
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+- Site em construção, ainda é necessário fazer a ligação com uma base de dados para manter os personagens inseridos
 
-## Learn More
+### O que eu aprendi
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+🟢 Como iniciar um projeto com React<br>
+🟢 Separação das pastas dos componentes para facilitar a manutençãot<br>
+🟢 Integração entre formulário e o DOM<br>
+🟢 Filtragem das informações de acordo com parâmetros<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Autor
 
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+- [Matheus Trojan](https://www.linkedin.com/in/matheus-trojan/)
