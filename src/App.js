@@ -48,18 +48,25 @@ function App() {
 		setPersonagens([...personagens, personagem])
 	}
 
+	function deletarPersonagem() {
+		console.log("deletando personagem")
+	}
+
 	return (
 		<div className="App">
 			<Banner />
 			<Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => personagemAdicionado(personagem)} />
 
-			{racas.map(raca => <CardsRaca
-				key={raca.nome} 
-				nome={raca.nome} 
-				corPrimaria={raca.corPrimaria} 
-				corSecundaria={raca.corSecundaria} 
-				personagens={personagens.filter(personagem => personagem.raca === raca.nome)}
-			/>)}
+			{racas.map(raca => 
+				<CardsRaca
+					key={raca.nome} 
+					nome={raca.nome} 
+					corPrimaria={raca.corPrimaria} 
+					corSecundaria={raca.corSecundaria} 
+					personagens={personagens.filter(personagem => personagem.raca === raca.nome)}
+					aoDeletar={deletarPersonagem}
+				/>
+			)}
 			<Rodape />
 
 		</div>
