@@ -11,7 +11,6 @@
   - [Deploy](#deploy)
 - [Meu processo](#meu-processo)
   - [Projetado com](#projetado-com)
-  - [O que falta fazer](#o-que-falta-fazer)
   - [O que eu aprendi](#o-que-eu-aprendi)
 - [Autores](#autores)
 
@@ -45,10 +44,6 @@ Acesse através deste [link](https://organograma-lotr.vercel.app/)
 - React
 - React Hooks
 - Componentes Reutilizáveis
-
-### O que falta fazer
-
-- Site em construção, ainda é necessário fazer a ligação com uma base de dados para manter os personagens inseridos
 
 ### O que eu aprendi
 
