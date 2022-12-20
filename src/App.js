@@ -7,51 +7,66 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-	const [racas, setRacas] = useState([
-		{
-			nome: "Ainur",
-			cor: "#57C278",
-		},
-		{
-			nome: "Anões",
-			cor: "#82CFFA",
-		},
-		{
-			nome: "Criaturas",
-			cor: "#A6D157",
-		},
-		{
-			nome: "Elfos",
-			cor: "#E06B69",
-		},
-		{
-			nome: "Hobbits",
-			cor: "#FFBA05",
-		},
-		{
-			nome: "Humanos",
-			cor: "#FF8A29",
-		},
-	])
+const [racas, setRacas] = useState([
+	{
+		id: uuidv4(),
+		nome: "Ainur",
+		cor: "#57C278",
+	},
+	{
+		id: uuidv4(),
+		nome: "Anões",
+		cor: "#82CFFA",
+	},
+	{
+		id: uuidv4(),
+		nome: "Criaturas",
+		cor: "#A6D157",
+	},
+	{
+		id: uuidv4(),
+		nome: "Elfos",
+		cor: "#E06B69",
+	},
+	{
+		id: uuidv4(),
+		nome: "Hobbits",
+		cor: "#FFBA05",
+	},
+	{
+		id: uuidv4(),
+		nome: "Humanos",
+		cor: "#FF8A29",
+	},
+])
 
 	const inicial = [
 		{
-		  nome: 'Gandalf',
-		  historia: 'lorem ipsum',
-		  imagem: 'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/08/1299459.jpg',
-		  raca: racas[0].nome
+			id: uuidv4(),
+			nome: 'Gandalf',
+			historia: 'lorem ipsum',
+			imagem: 'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/08/1299459.jpg',
+			raca: racas[0].nome
+		},
+		{
+			id: uuidv4(),
+			nome: 'Saruman',
+			historia: 'lorem ipsum',
+			imagem: 'http://pm1.narvii.com/6300/452e8e5f5171ebf848c7015016ead7b098c86c68_00.jpg',
+			raca: racas[0].nome
 		}
 	]
 
 	const [personagens, setPersonagens] = useState(inicial)
 
-	function deletarPersonagem() {
-		console.log("deletando personagem")
+	function deletarPersonagem(id) {
+		setPersonagens(personagens.filter(personagem => personagem.id !== id))
+		console.log(personagens)
 	}
 
-	function mudarCorDaRaca(cor, nome) {
+	function mudarCorDaRaca(cor, id) {
 		setRacas(racas.map(raca => {
-			if(raca.nome === nome) {
+			if(raca.id === id) {
 				raca.cor = cor;
 			}
 			return raca;
@@ -62,8 +77,8 @@ function App() {
 		<div>
 		  <Banner />
 		  <Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => setPersonagens([...personagens, personagem])} />
-		  <section className="racas">
-			<h1>Minha organização</h1>
+		  <section>
+			<h1 className='cards-titulo'>Raças e Personagens</h1>
 			{racas.map((raca, indice) => 
 				<CardsRaca 
 					key={indice} 

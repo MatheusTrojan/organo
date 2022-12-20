@@ -1,3 +1,7 @@
+.cards-titulo {
+    text-align: center;
+}
+
 .cards-raca {
     background-blend-mode: multiply;
     padding: 2rem;
@@ -24,4 +28,5 @@
     position: absolute;
     right: 50px;
     top: 20px;
+    cursor: pointer;
 }

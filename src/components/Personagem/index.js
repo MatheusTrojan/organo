@@ -3,7 +3,11 @@ import "./Personagem.css"
 
 const Personagem = ({ personagem, corDeFundo, aoDeletar }) => {
     return (<div className="personagem">
-        <CgCloseO size={25} className="deletar" onClick={aoDeletar} />
+        <CgCloseO 
+            size={25} 
+            className="deletar" 
+            onClick={() => aoDeletar(personagem.id)} 
+        />
         <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
             <img src={personagem.imagem} alt={personagem.nome} />
         </div>
