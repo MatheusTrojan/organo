@@ -42,35 +42,28 @@ function App() {
 
 	const [personagens, setPersonagens] = useState([])
 
-	const personagemAdicionado = (personagem) => {
-		// debugger
-		// console.log(personagem)
-		setPersonagens([...personagens, personagem])
-	}
-
 	function deletarPersonagem() {
 		console.log("deletando personagem")
 	}
 
 	return (
-		<div className="App">
-			<Banner />
-			<Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => personagemAdicionado(personagem)} />
-
-			{racas.map(raca => 
-				<CardsRaca
-					key={raca.nome} 
-					nome={raca.nome} 
-					corPrimaria={raca.corPrimaria} 
-					corSecundaria={raca.corSecundaria} 
-					personagens={personagens.filter(personagem => personagem.raca === raca.nome)}
-					aoDeletar={deletarPersonagem}
+		<div>
+		  <Banner />
+		  <Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => setPersonagens([...personagens, personagem])} />
+		  <section className="racas">
+			<h1>Minha organização</h1>
+			{racas.map((raca, indice) => 
+				<CardsRaca 
+					key={indice} 
+					raca={raca} 
+					personagens={personagens.filter(personagem => personagem.raca === raca.nome)} 
+					aoDeletar={deletarPersonagem} 
 				/>
 			)}
-			<Rodape />
-
+		  </section>
+		  <Rodape />
 		</div>
-	);
+	  );
 }
 
 export default App;

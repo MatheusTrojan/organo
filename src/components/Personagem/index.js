@@ -1,19 +1,15 @@
 import "./Personagem.css"
 
-// ao invés de PROPS, podemos desestruturar e passar "mastigado" o que eu quero passar como parametro, sem a necessidade de colocar "props." na frente de cada elemento
-const Personagem = ({ nome, historia, imagem, corDeFundo }) => {
-    return (
-        <div className="personagem">
-            <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
-                <img src={imagem} alt={nome}/>
-            </div>
-
-            <div className="rodape">
-                <h4>{nome}</h4>
-                <h5>{historia}</h5>
-            </div>
+const Personagem = ({ personagem, corDeFundo, aoDeletar }) => {
+    return (<div className="personagem">
+        <div className="cabecalho" style={{ backgroundColor: corDeFundo }}>
+            <img src={personagem.imagem} alt={personagem.nome} />
         </div>
-    )
+        <div className="rodape">
+            <h4>{personagem.nome}</h4>
+            <h5>{personagem.historia}</h5>
+        </div>
+    </div>)
 }
 
 export default Personagem

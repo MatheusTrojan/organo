@@ -1,35 +1,28 @@
 import Personagem from "../Personagem"
 import "./CardsRaca.css"
 
-const CardsRaca = (props, aoDeletar) => {
-
-    const css = { 
-        backgroundColor: props.corSecundaria
-    }
-
+const CardsRaca = ({ raca, personagens, aoDeletar }) => {
     return (
-        props.personagens.length > 0 && <section className="cards-raca" style={css}>
-            <h3 style={{ borderColor: props.corPrimaria }}>{props.nome}</h3>
-            <div className="cards-personagem">
-                {props.personagens.map( personagem => {
+        personagens.length > 0 && <section className='cards-raca' style={{ backgroundImage: '', backgroundColor: raca.corPrimaria }}>
+            <h3 style={{ borderColor: raca.corSecundaria }}>{raca.nome}</h3>
+            <div className='cards-personagem'>
+                {personagens.map((personagem, indice) => {
                     console.log(<Personagem 
-                        key={personagem.nome}
-                        nome={personagem.nome} 
-                        historia={personagem.historia}
-                        imagem={personagem.imagem}
-                        corDeFundo={props.corPrimaria}
-                        aoDeletar= {aoDeletar}
+                        key={indice} 
+                        personagem={personagem} 
+                        corDeFundo={raca.corSecundaria} 
+                        aoDeletar={aoDeletar} 
                     />)
                     return <Personagem 
-                        key={personagem.nome}
-                        nome={personagem.nome} 
-                        historia={personagem.historia}
-                        imagem={personagem.imagem}
-                        corDeFundo={props.corPrimaria}
-                        aoDeletar= {props.aoDeletar}
-                    />})}
+                        key={indice} 
+                        personagem={personagem} 
+                        corDeFundo={raca.corSecundaria} 
+                        aoDeletar={aoDeletar} 
+                    />
+                })}
             </div>
         </section>
+
     )
 }
 
