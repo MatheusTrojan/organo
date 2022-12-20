@@ -3,41 +3,36 @@ import Banner from './components/Banner';
 import CardsRaca from './components/CardsRaca';
 import Form from './components/Form';
 import Rodape from './components/Rodape';
+import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-	const racas = [
+	const [racas, setRacas] = useState([
 		{
 			nome: "Ainur",
-			corPrimaria: "#57C278",
-			corSecundaria: "#D9F7E9"
+			cor: "#57C278",
 		},
 		{
 			nome: "Anões",
-			corPrimaria: "#82CFFA",
-			corSecundaria: "#E8F8FF"
+			cor: "#82CFFA",
 		},
 		{
 			nome: "Criaturas",
-			corPrimaria: "#A6D157",
-			corSecundaria: "#F0F8E2"
+			cor: "#A6D157",
 		},
 		{
 			nome: "Elfos",
-			corPrimaria: "#E06B69",
-			corSecundaria: "#FDE7E8"
+			cor: "#E06B69",
 		},
 		{
 			nome: "Hobbits",
-			corPrimaria: "#FFBA05",
-			corSecundaria: "#FFF5D9"
+			cor: "#FFBA05",
 		},
 		{
 			nome: "Humanos",
-			corPrimaria: "#FF8A29",
-			corSecundaria: "#FFEEDF"
+			cor: "#FF8A29",
 		},
-	]
+	])
 
 	const inicial = [
 		{
@@ -54,6 +49,15 @@ function App() {
 		console.log("deletando personagem")
 	}
 
+	function mudarCorDaRaca(cor, nome) {
+		setRacas(racas.map(raca => {
+			if(raca.nome === nome) {
+				raca.cor = cor;
+			}
+			return raca;
+		}))
+	}
+
 	return (
 		<div>
 		  <Banner />
@@ -66,6 +70,7 @@ function App() {
 					raca={raca} 
 					personagens={personagens.filter(personagem => personagem.raca === raca.nome)} 
 					aoDeletar={deletarPersonagem} 
+					mudarCor={mudarCorDaRaca}
 				/>
 			)}
 		  </section>
