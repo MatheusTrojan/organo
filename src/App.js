@@ -4,7 +4,6 @@ import CardsRaca from './components/CardsRaca';
 import Form from './components/Form';
 import Rodape from './components/Rodape';
 
-
 function App() {
 
 	const racas = [
@@ -40,7 +39,16 @@ function App() {
 		},
 	]
 
-	const [personagens, setPersonagens] = useState([])
+	const inicial = [
+		{
+		  nome: 'Gandalf',
+		  historia: 'lorem ipsum',
+		  imagem: 'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/08/1299459.jpg',
+		  raca: racas[0].nome
+		}
+	]
+
+	const [personagens, setPersonagens] = useState(inicial)
 
 	function deletarPersonagem() {
 		console.log("deletando personagem")

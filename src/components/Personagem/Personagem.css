@@ -1,4 +1,5 @@
 .personagem {
+    position: relative;
     width: 280px;
 }
 
@@ -39,4 +40,10 @@
     max-height: 100px;
     overflow-y: scroll;
     text-align: justify;
+}
+
+.deletar {
+    position: absolute;
+    right: 5px;
+    top: 5px;
 }

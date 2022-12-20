@@ -7,12 +7,6 @@ const CardsRaca = ({ raca, personagens, aoDeletar }) => {
             <h3 style={{ borderColor: raca.corSecundaria }}>{raca.nome}</h3>
             <div className='cards-personagem'>
                 {personagens.map((personagem, indice) => {
-                    console.log(<Personagem 
-                        key={indice} 
-                        personagem={personagem} 
-                        corDeFundo={raca.corSecundaria} 
-                        aoDeletar={aoDeletar} 
-                    />)
                     return <Personagem 
                         key={indice} 
                         personagem={personagem} 
