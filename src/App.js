@@ -7,38 +7,38 @@ import { v4 as uuidv4 } from 'uuid';
 
 function App() {
 
-const [racas, setRacas] = useState([
-	{
-		id: uuidv4(),
-		nome: "Ainur",
-		cor: "#57C278",
-	},
-	{
-		id: uuidv4(),
-		nome: "Anões",
-		cor: "#82CFFA",
-	},
-	{
-		id: uuidv4(),
-		nome: "Criaturas",
-		cor: "#A6D157",
-	},
-	{
-		id: uuidv4(),
-		nome: "Elfos",
-		cor: "#E06B69",
-	},
-	{
-		id: uuidv4(),
-		nome: "Hobbits",
-		cor: "#FFBA05",
-	},
-	{
-		id: uuidv4(),
-		nome: "Humanos",
-		cor: "#FF8A29",
-	},
-])
+	const [racas, setRacas] = useState([
+		{
+			id: uuidv4(),
+			nome: "Ainur",
+			cor: "#57C278",
+		},
+		{
+			id: uuidv4(),
+			nome: "Anões",
+			cor: "#82CFFA",
+		},
+		{
+			id: uuidv4(),
+			nome: "Criaturas",
+			cor: "#A6D157",
+		},
+		{
+			id: uuidv4(),
+			nome: "Elfos",
+			cor: "#E06B69",
+		},
+		{
+			id: uuidv4(),
+			nome: "Hobbits",
+			cor: "#FFBA05",
+		},
+		{
+			id: uuidv4(),
+			nome: "Humanos",
+			cor: "#FF8A29",
+		},
+	])
 
 	const inicial = [
 		{
@@ -73,11 +73,19 @@ const [racas, setRacas] = useState([
 		}))
 	}
 
+	function cadastrarRaca(novaRaca) {
+		setRacas([...racas, { ...novaRaca, id: uuidv4() } ])
+	}
+
 	return (
 		<div>
-		  <Banner />
-		  <Form racas={racas.map(raca => raca.nome)} aoPersonagemCadastrado={personagem => setPersonagens([...personagens, personagem])} />
-		  <section>
+			<Banner />
+			<Form 
+				cadastrarRaca={cadastrarRaca}
+				racas={racas.map(raca => raca.nome)} 
+				aoPersonagemCadastrado={personagem => setPersonagens([...personagens, personagem])} 
+			/>
+			<section>
 			<h1 className='cards-titulo'>Raças e Personagens</h1>
 			{racas.map((raca, indice) => 
 				<CardsRaca 
@@ -87,11 +95,11 @@ const [racas, setRacas] = useState([
 					aoDeletar={deletarPersonagem} 
 					mudarCor={mudarCorDaRaca}
 				/>
-			)}
-		  </section>
-		  <Rodape />
+				)}
+				</section>
+			<Rodape />
 		</div>
-	  );
+	);
 }
 
 export default App;

@@ -4,18 +4,20 @@ import Dropdown from "../Dropdown";
 import Button from "../Button";
 import { useState } from "react";
 
-const Form = (props) => {
+const Form = ({ aoPersonagemCadastrado, racas, cadastrarRaca }) => {
 
     const [nome, setNome] = useState("")
     const [historia, setHistoria] = useState("")
     const [imagem, setImagem] = useState("")
     const [raca, setRaca] = useState("")
+    const [nomeRaca, setNomeRaca] = useState("")
+    const [corRaca, setCorRaca] = useState("")
 
     const submitForm = (event) => {
         event.preventDefault()
         // console.log("form foi submetido => ", nome, historia, imagem, raca)
 
-        props.aoPersonagemCadastrado({
+        aoPersonagemCadastrado({
             nome: nome,
             historia: historia,
             imagem: imagem,
@@ -54,13 +56,37 @@ const Form = (props) => {
                 />
                 <Dropdown 
                     label="Raça" 
-                    itens={props.racas}
+                    items={racas}
                     required={true}
                     valor={raca}
                     aoAlterado={valor => setRaca(valor)}
                 />
                 <Button> 
                     Criar Card 
+                </Button>
+            </form>
+
+            <form onSubmit={(event) => {
+                event.preventDefault()
+                cadastrarRaca({ nome: nomeRaca, cor: corRaca })
+            }}>
+                <h2>Preencha os dados para inserir uma nova raça</h2>
+                <TextField 
+                    label="Raça" 
+                    placeholder="Digite o nome da raça" 
+                    required
+                    valor={nomeRaca}
+                    aoAlterado = {valor => setNomeRaca(valor)}
+                />
+                <TextField 
+                    label="Cor" 
+                    placeholder="Digite a cor do time" 
+                    required
+                    valor={corRaca}
+                    aoAlterado = {valor => setCorRaca(valor)}
+                />
+                <Button> 
+                    Criar Raça
                 </Button>
             </form>
         </section>
