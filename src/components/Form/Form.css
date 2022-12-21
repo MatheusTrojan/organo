@@ -1,13 +1,16 @@
 .section__form {
     display: flex;
+    gap: 1.5em;
     justify-content: center;
-    margin: 3em 0;
+    flex-wrap: wrap;
+    margin: 3em 2em;
 }
 
-.section__form form {
-    max-width: 80%;
+.section__form .formulario {
     background-color: #F2F2F2;
     border-radius: 1.25em;
     box-shadow: 8px 8px 16px rgba(0, 0, 0, 0.08);
     padding: 1.5em;
+    flex: 1;
+    margin: 1.5em;
 }

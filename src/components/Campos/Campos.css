@@ -1,15 +1,15 @@
-.text-field {
+.campos {
     margin: 1.5em 0
 }
 
-.text-field label {
+.campos label {
     display: block;
     margin-bottom: 0.5em;
     font-size: 1.1em;
     font-weight: bold;
 }
 
-.text-field input {
+.campos input {
     background-color: #FFFFFF;
     border: none;
     box-shadow: 10px 10px 30px rgba(0, 0, 0, 0.06);
@@ -17,4 +17,9 @@
     font-size: 1em;
     padding: 1.5em;
     width: 100%;
+}
+
+.campos-color input{
+    height: 2.5em;
+    padding: .3em 1.5em;
 }
