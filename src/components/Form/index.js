@@ -42,14 +42,14 @@ const Form = ({ aoPersonagemCadastrado, racas, cadastrarRaca }) => {
                 />
                 <Campos 
                     label="Breve História" 
-                    placeholder="Digite uma breve história da personagem" 
+                    placeholder="Conte uma breve história da personagem" 
                     required={true}
                     valor={historia}
                     aoAlterado = {valor => setHistoria(valor)}
                 />
                 <Campos 
                     label="Imagem" 
-                    placeholder="Digite o endereço da imagem" 
+                    placeholder="Insira o endereço da imagem ( jpg )" 
                     required={true}
                     valor={imagem}
                     aoAlterado = {valor => setImagem(valor)}
@@ -74,9 +74,9 @@ const Form = ({ aoPersonagemCadastrado, racas, cadastrarRaca }) => {
                 setNomeRaca("")
                 setCorRaca("#000000")
             }}>
-                <h2>Preencha os dados para inserir uma nova raça</h2>
+                <h2>Ou preencha esse formulário para inserir uma nova raça:</h2>
                 <Campos 
-                    label="Raça" 
+                    label="Nome da Raça" 
                     placeholder="Digite o nome da raça" 
                     required
                     valor={nomeRaca}
@@ -84,7 +84,7 @@ const Form = ({ aoPersonagemCadastrado, racas, cadastrarRaca }) => {
                 />
                 <Campos 
                     type="color"
-                    label="Cor" 
+                    label="Escolha uma cor!" 
                     placeholder="Digite a cor do time" 
                     required
                     valor={corRaca}
