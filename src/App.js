@@ -43,6 +43,7 @@ function App() {
 	const inicial = [
 		{
 			id: uuidv4(),
+			favorito: false,
 			nome: 'Gandalf',
 			historia: 'lorem ipsum',
 			imagem: 'https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2022/08/1299459.jpg',
@@ -50,6 +51,7 @@ function App() {
 		},
 		{
 			id: uuidv4(),
+			favorito: false,
 			nome: 'Saruman',
 			historia: 'lorem ipsum',
 			imagem: 'http://pm1.narvii.com/6300/452e8e5f5171ebf848c7015016ead7b098c86c68_00.jpg',
@@ -77,6 +79,13 @@ function App() {
 		setRacas([...racas, { ...novaRaca, id: uuidv4() } ])
 	}
 
+	function resolverFavorito(id) {
+		setPersonagens(personagens.map(personagem => {
+			if(personagem.id === id) personagem.favorito = !personagem.favorito;
+			return personagem
+		}))
+	}
+
 	return (
 		<div>
 			<Banner />
@@ -94,6 +103,7 @@ function App() {
 					personagens={personagens.filter(personagem => personagem.raca === raca.nome)} 
 					aoDeletar={deletarPersonagem} 
 					mudarCor={mudarCorDaRaca}
+					aoFavoritar={resolverFavorito}
 				/>
 				)}
 				</section>
